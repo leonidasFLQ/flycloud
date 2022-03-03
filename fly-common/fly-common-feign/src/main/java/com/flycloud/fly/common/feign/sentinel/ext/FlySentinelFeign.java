@@ -91,16 +91,16 @@ public final class FlySentinelFeign {
 					FallbackFactory<?> fallbackFactoryInstance;
 					if (void.class != fallback) {
 						fallbackInstance = getFromContext(beanName, "fallback", fallback, target.type());
-						return new PigSentinelInvocationHandler(target, dispatch,
+						return new FlySentinelInvocationHandler(target, dispatch,
 								new FallbackFactory.Default(fallbackInstance));
 					}
 
 					if (void.class != fallbackFactory) {
 						fallbackFactoryInstance = (FallbackFactory<?>) getFromContext(beanName, "fallbackFactory",
 								fallbackFactory, FallbackFactory.class);
-						return new PigSentinelInvocationHandler(target, dispatch, fallbackFactoryInstance);
+						return new FlySentinelInvocationHandler(target, dispatch, fallbackFactoryInstance);
 					}
-					return new PigSentinelInvocationHandler(target, dispatch);
+					return new FlySentinelInvocationHandler(target, dispatch);
 				}
 
 				private Object getFromContext(String name, String type, Class<?> fallbackType, Class<?> targetType) {

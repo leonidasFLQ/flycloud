@@ -1,4 +1,6 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    com.pig4cloud.pig.common.feign.PigFeignAutoConfiguration,\
-    com.pig4cloud.pig.common.feign.sentinel.SentinelAutoConfiguration,\
-    com.pig4cloud.pig.common.feign.sentinel.handle.GlobalBizExceptionHandler
+    com.flycloud.fly.common.feign.FlyFeignAutoConfiguration,\
+    com.flycloud.fly.common.feign.sentinel.SentinelAutoConfiguration
+
+
+

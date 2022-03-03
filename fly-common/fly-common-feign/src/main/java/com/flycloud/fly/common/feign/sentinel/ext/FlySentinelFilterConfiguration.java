@@ -22,7 +22,7 @@ import java.util.Optional;
  */
 @RequiredArgsConstructor
 @ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.SERVLET)
-public class PigSentinelFilterConfiguration {
+public class FlySentinelFilterConfiguration {
 
 	@Bean
 	public SentinelWebInterceptor sentinelWebInterceptor(SentinelWebMvcConfig sentinelWebMvcConfig) {

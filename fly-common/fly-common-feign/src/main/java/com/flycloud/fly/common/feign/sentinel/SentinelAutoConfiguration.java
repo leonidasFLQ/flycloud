@@ -20,10 +20,10 @@ package com.flycloud.fly.common.feign.sentinel;
 import com.alibaba.cloud.sentinel.feign.SentinelFeignAutoConfiguration;
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.BlockExceptionHandler;
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.RequestOriginParser;
-import com.pig4cloud.pig.common.feign.sentinel.ext.PigSentinelFeign;
-import com.pig4cloud.pig.common.feign.sentinel.ext.PigSentinelFilterConfiguration;
-import com.pig4cloud.pig.common.feign.sentinel.handle.PigUrlBlockHandler;
-import com.pig4cloud.pig.common.feign.sentinel.parser.PigHeaderRequestOriginParser;
+import com.flycloud.fly.common.feign.sentinel.ext.FlySentinelFeign;
+import com.flycloud.fly.common.feign.sentinel.ext.FlySentinelFilterConfiguration;
+import com.flycloud.fly.common.feign.sentinel.handle.FlyUrlBlockHandler;
+import com.flycloud.fly.common.feign.sentinel.parser.FlyHeaderRequestOriginParser;
 import feign.Feign;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -40,7 +40,7 @@ import org.springframework.context.annotation.Scope;
  * sentinel 配置
  */
 @Configuration(proxyBeanMethods = false)
-@Import(PigSentinelFilterConfiguration.class)
+@Import(FlySentinelFilterConfiguration.class)
 @AutoConfigureBefore(SentinelFeignAutoConfiguration.class)
 public class SentinelAutoConfiguration {
 
@@ -49,19 +49,19 @@ public class SentinelAutoConfiguration {
 	@ConditionalOnMissingBean
 	@ConditionalOnProperty(name = "feign.sentinel.enabled")
 	public Feign.Builder feignSentinelBuilder() {
-		return PigSentinelFeign.builder();
+		return FlySentinelFeign.builder();
 	}
 
 	@Bean
 	@ConditionalOnMissingBean
 	public BlockExceptionHandler blockExceptionHandler() {
-		return new PigUrlBlockHandler();
+		return new FlyUrlBlockHandler();
 	}
 
 	@Bean
 	@ConditionalOnMissingBean
 	public RequestOriginParser requestOriginParser() {
-		return new PigHeaderRequestOriginParser();
+		return new FlyHeaderRequestOriginParser();
 	}
 
 }
