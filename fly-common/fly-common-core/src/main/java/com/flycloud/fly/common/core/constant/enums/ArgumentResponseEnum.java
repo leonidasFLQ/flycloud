@@ -17,6 +17,8 @@ public enum ArgumentResponseEnum {
 	 */
 	VALID_ERROR(-600, "参数校验异常"),
 
+	ILLEGAL_ARGS_ERROR(-601, "非法参数校验异常"),
+
 	;
 
 	/**

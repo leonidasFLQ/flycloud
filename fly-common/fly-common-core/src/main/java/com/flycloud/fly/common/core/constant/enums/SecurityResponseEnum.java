@@ -17,6 +17,12 @@ public enum SecurityResponseEnum {
 	 * auth 鉴权user not found
 	 */
 	USER_NOT_FOUND(-701, "鉴权用户不存在."),
+
+	/**
+	 * AccessDeniedException 异常错误
+	 */
+	ACCESS_DENIED(-403,"权限被拒绝"),
+
 	;
 
 	/**
