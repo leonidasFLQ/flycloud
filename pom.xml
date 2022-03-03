@@ -25,6 +25,8 @@
 	<modules>
 		<module>fly-common</module>
 		<module>fly-register</module>
+		<module>fly-gateway</module>
+		<module>fly-auth</module>
 	</modules>
 
 	<!-- 以下依赖 全局所有的模块都会引入  -->
@@ -51,13 +53,13 @@
 	<dependencyManagement>
 		<dependencies>
 			<!--fly 公共版本定义-->
-			<!--      <dependency>-->
-			<!--        <groupId>com.flycloud</groupId>-->
-			<!--        <artifactId>fly-common-bom</artifactId>-->
-			<!--        <version>${project.version}</version>-->
-			<!--        <type>pom</type>-->
-			<!--        <scope>import</scope>-->
-			<!--      </dependency>-->
+			<dependency>
+				<groupId>com.flycloud</groupId>
+				<artifactId>fly-common-bom</artifactId>
+				<version>${project.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 			<!-- spring boot 依赖 -->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
