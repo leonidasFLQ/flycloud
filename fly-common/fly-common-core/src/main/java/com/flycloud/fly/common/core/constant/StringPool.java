@@ -2,7 +2,7 @@ package com.flycloud.fly.common.core.constant;
 
 /**
  * 字符串特殊字符
- * @author fy
+ * @author fly
  * @date 2022/3/1
  **/
 public interface StringPool {

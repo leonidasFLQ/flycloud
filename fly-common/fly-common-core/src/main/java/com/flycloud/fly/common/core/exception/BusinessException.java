@@ -6,7 +6,7 @@ import com.flycloud.fly.common.core.constant.enums.IResponseCodeEnum;
 /**
  * 业务异常
  * 业务处理时，出现异常，可以抛出该异常
- * @author fy
+ * @author fly
  * @date 2022/2/25
  **/
 public class BusinessException extends BaseException{

@@ -5,7 +5,7 @@ import lombok.Getter;
 
 /**
  * 基础异常类，系统其他所有自定义异常类都需要继承本类
- * @author fy
+ * @author fly
  * @date 2022/2/25
  **/
 

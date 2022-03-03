@@ -6,7 +6,7 @@ import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.RequestOriginPars
 /**
  * sentinel 请求头解析判断
  * @author fly
- * @date 2020-06-11
+ * @date 2022/03/03
  */
 public class FlyHeaderRequestOriginParser implements RequestOriginParser {
 

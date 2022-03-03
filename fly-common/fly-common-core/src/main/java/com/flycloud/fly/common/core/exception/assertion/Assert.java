@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 /**
  * 异常断言接口
  * 提供简便的方式判断条件，并在条件满足时抛出异常，错误码和错误信息定义在枚举类中，在本断言方法中，传递错误信息需要的参数
- * @author fy
+ * @author fly
  * @date 2022/2/25
  **/
 

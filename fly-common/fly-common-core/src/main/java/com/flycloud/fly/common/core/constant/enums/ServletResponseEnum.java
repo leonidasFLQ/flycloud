@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 异常类与http status对照映射关系
- * @author fy
+ * @author fly
  * @date 2022/2/25
  **/
 

@@ -16,6 +16,7 @@
         <module>fly-common-bom</module>
         <module>fly-common-core</module>
         <module>fly-common-feign</module>
+        <module>fly-common-security</module>
     </modules>
 
 </project>

@@ -5,7 +5,7 @@ import com.flycloud.fly.common.core.constant.enums.IResponseCodeEnum;
 /**
  * 校验异常
  * 调用接口时，参数格式不合法可以抛出该异常
- * @author fy
+ * @author fly
  * @date 2022/2/25
  **/
 

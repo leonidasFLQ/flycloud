@@ -9,7 +9,7 @@
     </parent>
     <artifactId>fly-common-feign</artifactId>
     <packaging>jar</packaging>
-    <description>Demo project for Spring Boot</description>
+    <description>feign-sentinel服务降级熔断、限流组件</description>
 
     <dependencies>
         <dependency>
