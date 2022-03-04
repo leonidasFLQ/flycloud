@@ -19,6 +19,7 @@
         <module>fly-common-mybatis</module>
         <module>fly-common-security</module>
         <module>fly-common-log</module>
+        <module>fly-common-test</module>
     </modules>
 
 </project>

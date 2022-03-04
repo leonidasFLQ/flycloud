@@ -1,4 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    com.flycloud.fly.common.log.LogAutoConfiguration
-org.springframework.boot.env.EnvironmentPostProcessor=\
-    com.flycloud.fly.common.log.init.ApplicationLoggerInitializer

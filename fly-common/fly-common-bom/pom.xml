@@ -40,6 +40,16 @@
             </dependency>
             <dependency>
                 <groupId>com.flycloud</groupId>
+                <artifactId>fly-common-log</artifactId>
+                <version>${fly.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.flycloud</groupId>
+                <artifactId>fly-common-test</artifactId>
+                <version>${fly.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.flycloud</groupId>
                 <artifactId>fly-common-feign</artifactId>
                 <version>${fly.common.version}</version>
             </dependency>
