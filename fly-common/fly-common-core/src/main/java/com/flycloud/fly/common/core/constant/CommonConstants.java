@@ -54,4 +54,13 @@ public interface CommonConstants {
 	 * 菜单
 	 */
 	String MENU = "0";
+	/**
+	 * 当前页
+	 */
+	String CURRENT = "current";
+
+	/**
+	 * size
+	 */
+	String SIZE = "size";
 }
