@@ -16,6 +16,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring-boot.version>2.6.4</spring-boot.version>
         <nacos.version>2.0.4</nacos.version>
+        <mybatis-plus.version>3.4.3.4</mybatis-plus.version>
+        <security.oauth.version>2.1.8.RELEASE</security.oauth.version>
     </properties>
 
     <!-- 定义全局jar版本,模块使用需要再次引入但不用写版本号-->
@@ -27,9 +29,36 @@
                 <version>${fly.common.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.flycloud</groupId>
+                <artifactId>fly-common-mybatis</artifactId>
+                <version>${fly.common.version}</version>
+            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.flycloud</groupId>-->
+<!--                <artifactId>fly-common-security</artifactId>-->
+<!--                <version>${fly.common.version}</version>-->
+<!--            </dependency>-->
+            <dependency>
+                <groupId>com.flycloud</groupId>
+                <artifactId>fly-common-feign</artifactId>
+                <version>${fly.common.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.alibaba.nacos</groupId>
                 <artifactId>nacos-client</artifactId>
                 <version>${nacos.version}</version>
+            </dependency>
+            <!--稳定版本，替代spring security bom内置-->
+            <dependency>
+                <groupId>org.springframework.security.oauth.boot</groupId>
+                <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+                <version>${security.oauth.version}</version>
+            </dependency>
+            <!--orm 相关-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
             <!--web 模块-->
             <dependency>
@@ -46,14 +75,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

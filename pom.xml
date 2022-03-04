@@ -20,12 +20,14 @@
 		<spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
 		<alibaba.nacos.version>2.0.4</alibaba.nacos.version>
 		<hutool.version>5.7.21</hutool.version>
+
 	</properties>
 
 	<modules>
 		<module>fly-common</module>
 		<module>fly-register</module>
 		<module>fly-gateway</module>
+<!--		<module>fly-upms</module>-->
 		<module>fly-auth</module>
 	</modules>
 
