@@ -27,7 +27,7 @@
 		<module>fly-common</module>
 		<module>fly-register</module>
 		<module>fly-gateway</module>
-<!--		<module>fly-upms</module>-->
+		<module>fly-upms</module>
 		<module>fly-auth</module>
 	</modules>
 

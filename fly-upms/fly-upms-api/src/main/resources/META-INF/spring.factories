@@ -1,0 +1,5 @@
+com.flycloud.fly.common.feign.FlyFeignAutoConfiguration=\
+  com.flycloud.fly.admin.api.feign.RemoteDeptService,\
+  com.flycloud.fly.admin.api.feign.RemoteLogService,\
+  com.flycloud.fly.admin.api.feign.RemoteTokenService,\
+  com.flycloud.fly.admin.api.feign.RemoteUserService
