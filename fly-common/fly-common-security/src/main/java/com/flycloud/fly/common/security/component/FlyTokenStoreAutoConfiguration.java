@@ -1,6 +1,6 @@
 package com.flycloud.fly.common.security.component;
 
-import com.pig4cloud.pig.common.core.constant.CacheConstants;
+import com.flycloud.fly.common.core.constant.CacheConstants;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.security.oauth2.provider.token.TokenStore;

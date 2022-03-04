@@ -1,7 +1,8 @@
 package com.flycloud.fly.common.security.component;
 
-import com.pig4cloud.pig.common.security.exception.UnauthorizedException;
-import com.pig4cloud.pig.common.security.service.PigUser;
+import com.flycloud.fly.common.core.constant.enums.SecurityResponseEnum;
+import com.flycloud.fly.common.core.exception.BaseException;
+import com.flycloud.fly.common.security.service.FlyUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -36,20 +37,19 @@ public class FlyLocalResourceServerTokenServices implements ResourceServerTokenS
 		}
 
 		OAuth2Request oAuth2Request = oAuth2Authentication.getOAuth2Request();
-		if (!(oAuth2Authentication.getPrincipal() instanceof PigUser)) {
+		if (!(oAuth2Authentication.getPrincipal() instanceof FlyUser)) {
 			return oAuth2Authentication;
 		}
 
 		// 根据 username 查询 spring cache 最新的值 并返回
-		PigUser pigUser = (PigUser) oAuth2Authentication.getPrincipal();
+		FlyUser flyUser = (FlyUser) oAuth2Authentication.getPrincipal();
 
 		UserDetails userDetails;
 		try {
-			userDetails = userDetailsService.loadUserByUsername(pigUser.getUsername());
+			userDetails = userDetailsService.loadUserByUsername(flyUser.getUsername());
 		}
 		catch (UsernameNotFoundException notFoundException) {
-			throw new UnauthorizedException(String.format("%s username not found", pigUser.getUsername()),
-					notFoundException);
+			throw new BaseException(SecurityResponseEnum.USER_NOT_FOUND.getCode(),SecurityResponseEnum.USER_NOT_FOUND.getMsg());
 		}
 		Authentication userAuthentication = new UsernamePasswordAuthenticationToken(userDetails, "N/A",
 				userDetails.getAuthorities());

@@ -23,9 +23,10 @@ package com.flycloud.fly.common.security.component;
 
 import cn.hutool.http.HttpStatus;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.pig4cloud.pig.common.core.constant.CommonConstants;
-import com.pig4cloud.pig.common.core.exception.PigDeniedException;
-import com.pig4cloud.pig.common.core.util.R;
+import com.flycloud.fly.common.core.constant.CommonConstants;
+import com.flycloud.fly.common.core.exception.BaseException;
+import com.flycloud.fly.common.core.util.R;
+import com.flycloud.fly.common.security.enums.AuthResponseEnum;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -57,9 +58,10 @@ public class FlyAccessDeniedHandler extends OAuth2AccessDeniedHandler {
 		log.info("授权失败，禁止访问 {}", request.getRequestURI());
 		response.setCharacterEncoding(CommonConstants.UTF8);
 		response.setContentType(CommonConstants.CONTENT_TYPE);
-		R<PigDeniedException> result = R.failed(new PigDeniedException("授权失败，禁止访问"));
+		R<BaseException> result = R.failed(new BaseException(AuthResponseEnum.AUTH_FAILED_ERROR));
 		response.setStatus(HttpStatus.HTTP_FORBIDDEN);
 		PrintWriter printWriter = response.getWriter();
+		printWriter.append(objectMapper.writeValueAsString(null));
 		printWriter.append(objectMapper.writeValueAsString(result));
 	}
 

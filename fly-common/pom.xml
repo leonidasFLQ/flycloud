@@ -18,6 +18,7 @@
         <module>fly-common-feign</module>
         <module>fly-common-mybatis</module>
         <module>fly-common-security</module>
+        <module>fly-common-log</module>
     </modules>
 
 </project>

@@ -1,6 +1,6 @@
 package com.flycloud.fly.common.security.component;
 
-import com.pig4cloud.pig.common.core.util.SpringContextHolder;
+import com.flycloud.fly.common.core.util.SpringContextHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.scheduling.annotation.EnableScheduling;

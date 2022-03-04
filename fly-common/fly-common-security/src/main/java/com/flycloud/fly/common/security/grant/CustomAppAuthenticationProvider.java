@@ -1,6 +1,6 @@
 package com.flycloud.fly.common.security.grant;
 
-import com.pig4cloud.pig.common.security.service.PigUserDetailsServiceImpl;
+import com.flycloud.fly.common.security.service.FlyUserDetailsServiceImpl;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -49,7 +49,7 @@ public class CustomAppAuthenticationProvider extends AbstractUserDetailsAuthenti
 
 		// 手机号
 		String phone = authentication.getName();
-		UserDetails userDetails = ((PigUserDetailsServiceImpl) userDetailsService).loadUserByPhone(phone);
+		UserDetails userDetails = ((FlyUserDetailsServiceImpl) userDetailsService).loadUserByPhone(phone);
 		CustomAppAuthenticationToken token = new CustomAppAuthenticationToken(userDetails);
 		token.setDetails(authentication.getDetails());
 		return token;

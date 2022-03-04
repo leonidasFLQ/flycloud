@@ -31,4 +31,18 @@ public interface CommonConstants {
 	 * JSON 资源
 	 */
 	String CONTENT_TYPE = "application/json; charset=utf-8";
+	/**
+	 * 删除
+	 */
+	String STATUS_DEL = "1";
+
+	/**
+	 * 正常
+	 */
+	String STATUS_NORMAL = "0";
+
+	/**
+	 * 锁定
+	 */
+	String STATUS_LOCK = "9";
 }

@@ -22,6 +22,12 @@ public enum CommonResponseEnum implements CommonExceptionAssert {
 	 * 服务器异常，无法识别的异常，尽可能对通过判断减少未定义异常抛出
 	 */
 	SERVER_ERROR(-501, "网络异常"),
+
+	REQUEST_HEADER_CLIRNTID_IS_NULL_ERROR(-503, "请求头中client信息为空"),
+
+	DECODE_AUTH_TOKEN_ERROR(-504,"解码auth认证token失败"),
+
+	AUTH_TOKEN_ERROR(-505,"无效的auth认证token"),
 	;
 
 	/**
