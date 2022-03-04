@@ -45,4 +45,13 @@ public interface CommonConstants {
 	 * 锁定
 	 */
 	String STATUS_LOCK = "9";
+	/**
+	 * 菜单树根节点
+	 */
+	Integer MENU_TREE_ROOT_ID = -1;
+
+	/**
+	 * 菜单
+	 */
+	String MENU = "0";
 }

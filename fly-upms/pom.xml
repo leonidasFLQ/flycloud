@@ -15,7 +15,7 @@
 
   <modules>
     <module>fly-upms-api</module>
-<!--    <module>fly-upms-biz</module>-->
+    <module>fly-upms-biz</module>
   </modules>
 
 </project>
