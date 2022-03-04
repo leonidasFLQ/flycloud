@@ -33,14 +33,19 @@
                 <artifactId>fly-common-mybatis</artifactId>
                 <version>${fly.common.version}</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>com.flycloud</groupId>-->
-<!--                <artifactId>fly-common-security</artifactId>-->
-<!--                <version>${fly.common.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.flycloud</groupId>
+                <artifactId>fly-common-security</artifactId>
+                <version>${fly.common.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.flycloud</groupId>
                 <artifactId>fly-common-feign</artifactId>
+                <version>${fly.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.flycloud</groupId>
+                <artifactId>fly-upms-api</artifactId>
                 <version>${fly.common.version}</version>
             </dependency>
             <dependency>

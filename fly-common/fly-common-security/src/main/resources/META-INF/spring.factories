@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.flycloud.fly.common.security.service.FlyUserDetailsServiceImpl,\
+  com.flycloud.fly.common.security.component.FlySecurityInnerAspect,\
+  com.flycloud.fly.common.security.component.FlyTokenStoreAutoConfiguration,\
+  com.flycloud.fly.common.security.component.FlyTokenStoreAutoCleanSchedule
+
